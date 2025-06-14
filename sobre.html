@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdestraPet | Sobre Nós</title>
+  <link rel="stylesheet" href="css/style.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="pagina-sobre">
+
+  <header id="contato">
+        <div class="header-content">
+            <a href="index.html" class="back"><i class="fas fa-angle-left"></i> Voltar à página inicial</a>
+            <img src="img/Vector.png" class="logo" alt="AdestraPet-logotipo">
+        </div>
+    </header>
+
+  <!-- Conteúdo principal -->
+  <main class="container sobre-content">
+    <h1>Sobre Nós</h1>
+    <p class="descricao">
+      No AdestraPet, acreditamos na conexão verdadeira entre você e seu pet. Com dedicação, carinho e técnicas eficazes, ajudamos a transformar essa relação em uma experiência de aprendizado e amor mútuo.
+    </p>
+
+    <section class="cards-sobre">
+      <article class="card animate">
+        <h2>Missão</h2>
+        <p>Promover educação animal baseada no respeito, carinho e técnicas acessíveis para todos os tutores, fortalecendo vínculos saudáveis.</p>
+      </article>
+
+      <article class="card animate">
+        <h2>Visão</h2>
+        <p>Ser referência nacional em conteúdo de adestramento e bem-estar animal, inspirando milhares de tutores a cuidarem melhor de seus pets.</p>
+      </article>
+
+      <article class="card animate">
+        <h2>Valores</h2>
+        <p>Respeito, amor, paciência e comprometimento com a educação positiva e o bem-estar dos animais e seus tutores.</p>
+      </article>
+    </section>
+
+    <a href="contato.html" class="btn btn-contato">Fale conosco</a>
+  </main>
+  
+<script>
+  const animElements = document.querySelectorAll(".animate");
+
+  function checkVisibility() {
+    const triggerBottom = window.innerHeight * 0.9;
+
+    animElements.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < triggerBottom) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  window.addEventListener("load", checkVisibility);
+</script>
+
+</body>
+</html>

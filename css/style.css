@@ -1,0 +1,826 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  color: var(--text);
+}
+
+/* HOME <3 */
+.pagina-home * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pagina-home {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina-home img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pagina-home .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Header - página home */
+.pagina-home .header-home {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.pagina-home .header-home .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagina-home .logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.pagina-home .logo:hover {
+  transform: scale(1.05);
+}
+
+/* MENU DESKTOP */
+.pagina-home .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.pagina-home .menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pagina-home .menu a:hover {
+  color: #b40023;
+  transform: scale(1.05);
+}
+
+/* Seção Hero */
+.pagina-home .home-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.pagina-home .hero-content {
+  flex: 1 1 500px;
+}
+
+.pagina-home .hero-content h1 {
+  color: #b40023;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.pagina-home .hero-content p {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.pagina-home .hero-content .descricao {
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.pagina-home .btn {
+  background-color: #b40023;
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.pagina-home .btn:hover {
+  background-color: white;
+  color: #b40023;
+  border: 1px solid #b40023;
+}
+
+.pagina-home .hero-img {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+/* Seção Boas-vindas */
+.pagina-home .home-boas-vindas {
+  background-color: #b40023;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.pagina-home .bem-vindo-texto {
+  flex: 1 1 400px;
+}
+
+.pagina-home .bem-vindo-texto h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.pagina-home .bem-vindo-texto span {
+  font-weight: 700;
+  color: white;
+}
+
+.pagina-home .bem-vindo-texto p {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  /* Header container */
+  .pagina-home .header-home .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Esconde o menu desktop */
+  .pagina-home .menu {
+    display: none;
+  }
+
+  /* Mostra o menu mobile */
+  .pagina-home .menu-mobile {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #b40023;
+  }
+
+  /* Menu mobile aberto */
+  .pagina-home .menu.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+  }
+
+  .pagina-home .menu a {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  /* Ajustes menu */
+  .pagina-home .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .pagina-home .home-hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .pagina-home .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .pagina-home .hero-content p {
+    font-size: 1rem;
+  }
+
+  .pagina-home .btn {
+    padding: 10px 20px;
+  }
+
+  .pagina-home .home-boas-vindas .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pagina-home .bem-vindo-texto h2 {
+    font-size: 1.8rem;
+  }
+
+  .pagina-home .bem-vindo-texto p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagina-home .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .pagina-home .logo {
+    height: 40px;
+  }
+}
+
+/* MENU MOBILE - padrão escondido */
+.pagina-home .menu-mobile {
+  display: none;
+}
+
+/* Mostra menu mobile só em telas <=768px */
+@media (max-width: 768px) {
+  .pagina-home .menu-mobile {
+    display: block;
+  }
+}
+
+/* Página Sobre Nós */
+
+.pagina-sobre {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagina-sobre .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.pagina-sobre h1 {
+  font-size: 3rem;
+  color: #b40023;
+  margin-bottom: 20px;
+}
+
+.pagina-sobre .descricao {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Cards Sobre */
+
+.cards-sobre {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(180, 0, 35, 0.15);
+  flex: 1 1 280px;
+  max-width: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.card h2 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.card p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Efeito hover nos cards */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(180, 0, 35, 0.3);
+}
+
+.sobre-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Animação fade-in on scroll */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+}
+
+.animate.visible {
+  animation-name: fadeInUp;
+}
+
+/* Botão contato */
+
+.btn-contato {
+  margin-top: 30px; /* espaço entre cards e botão */
+  display: inline-block;
+  background-color: #b40023;
+  color: white;
+  padding: 15px 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+}
+
+.btn-contato:hover {
+  background-color: #8a001b;
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+  .cards-sobre {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    max-width: 90%;
+  }
+}
+
+
+/*CATEGORIAS !!! */
+:root {
+  --bg-color: #964f4f;
+  --card-bg: #b40023;
+}
+/* Campo de busca */
+#search {
+  display: block;
+  margin: 30px auto 35px auto;
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 500px;
+  border: 20 #b40023;
+  border-radius: 20px;
+  font-size: 1rem;
+  box-shadow: 0 0 6px rgba(228, 106, 106, 0.4);
+}
+
+/* Container dos cards */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-items: center;
+  padding-bottom: 50px;
+}
+
+/* Card individual */
+.card {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 0 6px rgba(228, 106, 106, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.card .category {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #feae;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+header .header-content {
+  display: flex;
+  align-items: center;
+  padding: 7px 80px;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+  align-items: right;
+  justify-content: right;
+  width: 120px;
+  padding: 10px;
+}
+
+section h1 {
+  margin-top: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+section h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 26px;
+  margin-top: -15px;
+  text-align: center;
+}
+
+.category-buttons {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.category-btn {
+  background-color: #b40023;
+  display: flex;
+  text-align: center;
+  width: 700px;
+  padding: 15px 20px;
+  border-radius: 30px;
+  border-color: #ffffff;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px auto;
+  transition: 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #05334a;
+}
+
+.category-btn span {
+  margin: 0 auto;
+}
+
+/* Pra telas menores que 768px (tablets e celulares maiores) */
+@media (max-width: 768px) {
+  header .header-content {
+    padding: 7px 20px;
+  }
+
+  header .logo {
+    margin-left: 0;
+    width: 100px;
+    padding: 5px;
+  }
+
+  section h1 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  section h3 {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+
+  .category-btn {
+    width: 90%; /* botão fica mais estreito e centralizado */
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+}
+
+/* Pra celulares pequenos (menos que 480px) */
+@media (max-width: 480px) {
+  #search {
+    max-width: 90%;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  #cards {
+    grid-template-columns: 1fr; /* cards em 1 coluna só */
+    max-width: 100%;
+    padding: 0 10px 50px 10px;
+  }
+
+  .card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  header .header-content {
+    flex-direction: column;
+    padding: 10px 10px;
+  }
+
+  header .logo {
+    margin: 0 auto 10px;
+  }
+
+  .category-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 20px;
+  }
+}
+
+
+/*CONTATO !!! */
+
+.h1-contact {
+  text-align: left;
+}
+
+.voltar {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 30px;
+  flex-wrap: wrap;
+}
+
+.info-contato {
+  max-width: 500px;
+}
+
+.info-contato h1 {
+  font-size: 36px;
+  color: #0b2c44;
+  margin-bottom: 10px;
+}
+
+.info-contato h1 span {
+  color: #0b2c44;
+  font-weight: bold;
+}
+
+.info-contato p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.contatos p {
+  font-weight: bold;
+  color: #222;
+}
+
+.formulario {
+  background-color: #b31c2b;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  color: white;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: white;
+  color: #b31c2b;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .info-contato {
+    text-align: center;
+  }
+
+  .formulario {
+    width: 100%;
+  }
+
+  .info-contato h1 {
+    font-size: 28px;
+  }
+}
+
+/* seus tutoriais css */
+
+/* MAIN CONTAINER */
+.container-tutorial {
+  max-width: 900px;
+  margin: 30px auto;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+  flex-grow: 1;
+}
+
+/* TÍTULO */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+/* CATEGORIA E DATA */
+.categoria,
+.data {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 4px;
+}
+
+.categoria {
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+/* SEÇÕES */
+section {
+  margin-top: 30px;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #444;
+  border-bottom: 2px solid #ff6f61;
+  padding-bottom: 6px;
+}
+
+/* PARÁGRAFOS */
+section p {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: justify;
+}
+
+/* BOTÃO VOLTAR */
+.voltar {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.voltar a {
+  text-decoration: none;
+  color: #ff6f61;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.voltar a:hover {
+  color: #d94c45;
+}
+
+/* FOOTER */
+footer {
+  background-color: #b31c2b;
+  color: #eee;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: auto;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  .container-tutorial {
+    margin: 15px;
+    padding: 20px;
+  }
+  
+  header nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  section h2 {
+    font-size: 1.3rem;
+  }
+  
+  section p {
+    font-size: 1rem;
+  }
+}

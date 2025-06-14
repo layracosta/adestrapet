@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdestraPet | Home</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+<body class="pagina-home">
+
+  <!-- Header -->
+  <header class="header-home">
+    <div class="container">
+      <img src="img/logo horizontal.png" alt="Logo AdestraPet" class="logo" />
+
+      <!-- Botão menu mobile -->
+      <div class="menu-mobile" id="menu-toggle">☰</div>
+
+      <!-- Menu único para desktop e mobile -->
+      <nav class="menu" id="menu">
+        <a href="index.html">Home</a>
+        <a href="categoriais.html">Categorias</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Hero -->
+  <section class="home-hero container">
+    <div class="hero-content">
+      <h1>Conecte, Ensine, Ame:</h1>
+      <p>Transforme seu pet com carinho e confiança.</p>
+      <p class="descricao">
+        Dicas práticas, tutoriais passo a passo e muito carinho para ajudar você a educar seu pet com respeito e confiança.
+      </p>
+      <a href="contato.html" class="btn">Treinar meu Pet</a>
+    </div>
+    <div class="hero-img">
+      <img src="img/logo.png" alt="imagem de animais" />
+    </div>
+  </section>
+
+  <!-- Seção Boas-vindas -->
+  <section class="home-boas-vindas">
+    <div class="container" style="display: flex; align-items: center; flex-wrap: wrap; gap: 40px;">
+      <div class="bem-vindo-img" style="flex: 1 1 300px;">
+        <img src="img/logo branca.png" alt="Imagem dos animais em branco" style="width: 100%; max-width: 300px;" />
+      </div>
+
+      <div class="bem-vindo-texto" style="flex: 1 1 500px;">
+        <h2>Bem-vindo ao <span>AdestraPet!</span></h2>
+        <p>
+          Aqui, acreditamos que todo animal pode aprender — com paciência, amor e as técnicas certas.
+        </p>
+        <p><strong>Nosso Objetivo</strong> é te ajudar a construir uma relação mais harmoniosa com seu pet, <strong>por meio de tutoriais fáceis e acessíveis para todos.</strong></p>
+        <p>
+          Navegue por <strong>categorias</strong> como <strong>Cães, Gatos, Coelhos, Aves e Cavalos</strong>, aprenda desde os comandos básicos até dicas para lidar com comportamentos difíceis.
+        </p>
+        <p>
+          <strong>Comece hoje</strong> mesmo a jornada do adestramento com quem entende do assunto, e ama os animais como você.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
